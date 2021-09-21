@@ -1,5 +1,5 @@
 const path = require('path')
-const {HotModuleRelacmentPlugin} = require('webpack');
+const {HotModuleReplacmentPlugin} = require('webpack');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const NODE_ENV = process.env.NODE_ENV;
 const IS_DEV = NODE_ENV === 'development';
@@ -13,7 +13,7 @@ module.exports= {
  resolve:{
    extensions:['.js', '.jsx', '.ts', 'tsx', 'json'],
    alias: {
-      'react-dom': IS_DEV ? 'hot-loader/react-dom' : 'react-dom',
+      'react-dom': IS_DEV ? '@hot-loader/react-dom' : 'react-dom',
    }
  },
   mode:NODE_ENV ? NODE_ENV :'development',
