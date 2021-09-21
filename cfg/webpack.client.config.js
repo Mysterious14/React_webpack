@@ -32,7 +32,7 @@ module.exports= {
       use:['ts-loader']
     },
   {
-    test:'/\.css$/',
+    test:/\.css$/,
     use: ['style-loader', {
       loader: 'css-loader',
       options:{
