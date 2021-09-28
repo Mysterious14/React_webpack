@@ -1,7 +1,7 @@
 const path = require('path')
 const {HotModuleReplacmentPlugin} = require('webpack');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
-const NODE_ENV = process.env.NODE_ENV;
+const NODE_ENV = 'development';
 const IS_DEV = NODE_ENV === 'development';
 const IS_PROD = NODE_ENV === 'production';
 
@@ -48,7 +48,7 @@ module.exports= {
  
   devtool:setupDevtool(),
   plugins: IS_DEV ? [ 
-    new HotModuleRelacmentPlugin(),
+    new HotModuleReplacmentPlugin(),
     new CleanWebpackPlugin(),
   ]
   : [],
