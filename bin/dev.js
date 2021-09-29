@@ -20,7 +20,7 @@ hmrServer.use(webpackDevMiddleware(clientCompiler, {
   stats:'errors-only'
 }));
 
-hmrServer.use(webpackHotMiddleware(clientCompiler,{
+hmrServer.use(webpackHotDevMiddleware(clientCompiler,{
   path: '/static/__webpack_hmr',
 }));
 

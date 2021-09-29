@@ -18,7 +18,7 @@ module.exports = {
   },
   externals:[nodeExternals()],
   module:{
-    rules:[{
+    loader:[{
       test:/\.[tj]sx?$/,
       use:['ts-loader']
     },

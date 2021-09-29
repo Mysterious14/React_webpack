@@ -27,7 +27,7 @@ module.exports= {
     publicPath:'/static/',
   },
   module:{
-    rules:[{
+    loader:[{
       test:/\.[tj]sx?$/,
       use:['ts-loader']
     },
